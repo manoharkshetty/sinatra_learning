@@ -1,6 +1,20 @@
 require "sinatra/base"
 
+
+IMAGES =[
+	{
+	title: "ALASKA",
+	url: "http://www.davidsfotos.com/LANDSCAPESpage_files/LANDSCAPES2.jpg"
+	}]
+
+
 class App < Sinatra::Base
+
+get "/image" do 
+	@images = IMAGES
+	#p @images[:title]
+	erb :image
+end
 
 get "/" do
 	"hello world! from get"
