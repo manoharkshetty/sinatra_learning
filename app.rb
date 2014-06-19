@@ -14,5 +14,8 @@ put "/" do
 delete "/" do
 	"hello world! in delete"
 	end
+get "/hello/:fname/?:lname?" do |fname, lname|
+	"hello #{fname} #{lname}"
+	end
 
 end
